@@ -22,7 +22,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     id="cordova-plugin-camera"
-    version="1.2.1-dev">
+    version="1.2.0">
     <name>Camera</name>
     <description>Cordova Camera Plugin</description>
     <license>Apache 2.0</license>
@@ -50,12 +50,12 @@
             <feature name="Camera">
                 <param name="firefoxos-package" value="Camera" />
             </feature>
-        </config-file>                                         
-        
+        </config-file>
+
         <js-module src="src/firefoxos/CameraProxy.js" name="CameraProxy">
           <runs />
         </js-module>
-    </platform>  
+    </platform>
 
     <!-- android -->
     <platform name="android">
@@ -98,7 +98,7 @@
         </js-module>
 
      </platform>
-     
+
      <!-- ubuntu -->
      <platform name="ubuntu">
          <config-file target="config.xml" parent="/*">
@@ -147,11 +147,14 @@
          <framework src="MobileCoreServices.framework" />
          <framework src="CoreGraphics.framework" />
          <framework src="AVFoundation.framework" />
-         
+
          <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
              <string></string>
          </config-file>
-                  
+
+         <resource-file src="src/ios/Resources/overlay-highlight@2x.png" />
+         <resource-file src="src/ios/Resources/overlay-example@2x.png" />
+
      </platform>
 
     <!-- blackberry10 -->
